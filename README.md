@@ -17,9 +17,9 @@ Rendez vous maintenant dans le dossier du projet :
 ## Pour la bonne Utilisation du site :
   * composer install afin de récuperé le vendor
   * Un fichier .sql est disponible afin d'importer la BDD
-Les identifiant pour la bdd sont 
-  * Username : root
-  * MDP:(null)
+  * Les identifiant pour la bdd sont 
+      * Username : root
+      * MDP:(null)
 
 ## Les identifiants de connexion pour l'administrateur sont 
 
