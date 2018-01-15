@@ -1,72 +1,57 @@
-Symfony Standard Edition
-========================
+Projet Symfony - Guillaume HANOTEL
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+INSTALLATION
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Clone du projet :
 
-What's inside?
---------------
+git clone https://github.com/guillaumehanotel/Personal-Website-V2
+Soyez sûr que le propriétaire/groupe du projet soient bien celui de votre utilisateur courant, si ce n'est pas le cas :
 
-The Symfony Standard Edition is configured with the following defaults:
+sudo chown -R $USER:$USER Personal-Website-V2
+Rendez vous maintenant dans le dossier du projet :
 
-  * An AppBundle you can use to start coding;
+L'installation se fait grâce à l'utilitaire make, plus particulièrement grâce à la commande :
 
-  * Twig as the only configured template engine;
+make install
+Si l'utilisateur Apache de votre système n'est pas 'www-data' par défaut, vous pouvez passer en paramètre le bon :
 
-  * Doctrine ORM/DBAL;
+make install APACHE_USER=http
+Enfin pour lancer le serveur :
 
-  * Swiftmailer;
+make server
+Vous pouvez inspecter le fichier Makefile pour plus d'informations, mais voici les opérations effectués :
 
-  * Annotations enabled for everything.
+Install Vendor
+Cache Clear
+Création BDD/Tables/Garnissage des tables
+Changement des permissions
+Si à un moment, un problème de cache apparait, vous pouvez utiliser la commande
 
-It comes pre-configured with the following bundles:
+make cache-clear
+USAGE
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+Accès Espace Admin
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+L'accès à l'espace admin est accessible lorsque que vous passez votre souris en bas à droite de votre navigateur, une petite icone cliquable apparaitra.
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Par défaut, j'ai conçu ce site web pour qu'il n'y est qu'un seul utilisateur, il n'y a donc pas de page Inscription.
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+Les identifiants de connexion pour l'unique utilisateur/administrateur sont :
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+Identifiant : guillaumeh
+Mot de Passe : erty
+Une fois sur l'espace d'administration, vous pouvez vous déconnecter grâce au menu en haut à droite.
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+Envoi Mail
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+Pour des raisons évidentes, je n'ai pas transmis mon mot de passe gmail dans les paramètres par défaut, mais les autres paramètres de messagerie sont corrects et sachez qu'avec mon mdp gmail, l'envoi de mail fonctionne avec le formulaire de contact.
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+Commentaires
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+Pour l'exercice, j'ai géré la gestion des images (avatar) pour les utilisateurs, qui sont notamment affiché à côté des commentaires postés. Lorsque l'utilisateur/l'administrateur n'est pas connecté, le formulaire de commentaires contient les champs Nom et Commentaire. Lorsque qu'un utilisateur est connecté, le champ Nom n'est pas demandé et est automatiquement rempli avec les infos de l'utilisateur connecté.
 
-  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
-    capabilities
+En somme, les commentaires postés par des visiteurs auront tous un avatar par défaut, tandis que si c'est moi (connecté) qui poste un commentaire, mon avatar sera affiché.
 
-  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
-    using the PHP built-in web server
+PS :
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.4/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.4/doctrine.html
-[8]:  https://symfony.com/doc/3.4/templating.html
-[9]:  https://symfony.com/doc/3.4/security.html
-[10]: https://symfony.com/doc/3.4/email.html
-[11]: https://symfony.com/doc/3.4/logging.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
+N'hésitez pas à me faire un retour sur les erreurs que j'aurais commises ou les points à améliorer.
