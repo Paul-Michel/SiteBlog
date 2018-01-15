@@ -17,11 +17,11 @@ Afin d'initialiser le projet il faut utiliser la commande : composer create-proj
 
 
 ## Pour la bonne Utilisation du site :
-  composer install afin de récuperé le vendor
-  Un fichier .sql est disponible afin d'importer la BDD
-  Les identifiant pour la bdd sont 
-  Username : root
-  MDP:(null)
+  * composer install afin de récuperé le vendor
+  * Un fichier .sql est disponible afin d'importer la BDD
+  * Les identifiant pour la bdd sont 
+  * Username : root
+  * MDP:(null)
 
 L'administrabilité via le compte admin est répartie un peut partout dans le site. il suffit de se connecter avec le compte administrateur pour y avoir accès.
 
