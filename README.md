@@ -1,20 +1,18 @@
 Projet Symfony - Paul-Michel GARZARO
 ==========================================================================================================================
-INSTALLATION
-
-## Clone du projet :
-
-  git clone https://github.com/Paul-Michel/SiteBlog
-
-Rendez vous maintenant dans le dossier du projet :
-
-J'ai personnellement utiliser windows et l'utilitaire wamp pour intsaller php et apache
+## INSTALLATION
+  J'ai personnellement utiliser windows et l'utilitaire wamp pour intsaller php et apache
 
 une fois ceci fait pour installer le projet symfony j'ai utiliser l'utilitaire composer.
 Pour l'installer il suffit de se rendre sur leur site et de le télécharger.
 
 Afin d'initialiser le projet il faut utiliser la commande : composer create-project symfony/skeleton my-project.
 
+## Clone du projet :
+
+  git clone https://github.com/Paul-Michel/SiteBlog
+
+Rendez vous maintenant dans le dossier du projet :
 
 ## Pour la bonne Utilisation du site :
   * composer install afin de récuperé le vendor
