@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block titre %}Liste d'article{% endblock %}
+{% block main %}
+    <div class="row">
+    <div class="col s12 "><p></p></div>
+    <div class="col s12 m4 l2"><p></p></div>
+    <div class="col s12 m4 l8 "><p>
+    {% for item in items %}
+        <br/>
+        <div class="card small white darken-1 z-depth-5">
+            <div class="card-content black-text">
+                <span class="card-title">{{ item.title }}<br/></span>
+        <p><br/>{{ item.description|truncate(650, true)}}<br/></p>
+        </div>
+        <div class="card-action center-align">
+            <a href="{{ path('oneList',{id: item.id}) }}" class="red-text">Voir plus</a>
+            {% if app.user and app.user.hasRole('ROLE_ADMIN') %}<a href="{{ path('removeArticle',{id: item.id})}}" class="red-text">Supprimer</a>{% endif %}
+        </div>
+        </div>
+    {% endfor %}
+
+    </p></div>
+    <div class="col s12 m4 l2 "><p>{% if app.user and app.user.hasRole('ROLE_ADMIN') %}<a href="{{ path('article')}}" class="waves-effect waves-light btn">Ajouter</a>{% endif %}</p></div>
+    </div>
+
+
+{% endblock %}

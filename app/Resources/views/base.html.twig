@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Site Cv{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% block stylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    <nav>
+        <div class="nav-wrapper white black-text">
+            <a href="{{ path('index')}}" class="brand-logo center black-text">{% block titre %}Paul-Michel Garzaro{% endblock %}</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="{{ path('list')}}" class="black-text">Actualité</a></li>
+                <li><a href="{{ path('cv')}}" class="black-text">CV</a></li>
+                {% if app.user and app.user.hasRole('ROLE_ADMIN') %}<li><a href="{{ path('panel')}}" class="black-text">Panel</a></li>{% endif %}
+                <li><a href="{{ path('fos_user_profile_show')}}" class="black-text">Profil</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                {% if app.user == false %}
+                    <a href="{{ path('fos_user_security_login') }}" class="waves-effect waves-light btn red">Connexion</a>
+                    <li><a href="{{ path('fos_user_registration_register') }}" class="waves-effect waves-light btn red">S'enregistrer</a></li>
+                {% else %}
+                    <a href="{{ path('fos_user_security_logout') }}" class="waves-effect waves-light btn red">Déconnexion</a>
+                {% endif %}
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                {% if app.user == false %}
+                    <li><a href="{{ path('fos_user_security_login') }}" class="waves-effect waves-light btn red">Connexion</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}" class="waves-effect waves-light btn red">S'enregistrer</a></li>
+                {% else %}
+                    <li><a href="{{ path('fos_user_security_logout') }}" class="waves-effect waves-light btn red">Déconnexion</a></li>
+                {% endif %}
+                <li><a href="{{ path('list')}}">Actualités</a></li>
+                <li><a href="{{ path('cv')}}">CV</a></li>
+                {% if app.user and app.user.hasRole('ROLE_ADMIN') %}<li><a href="{{ path('panel')}}" class="black-text">Panel</a></li>{% endif %}
+                <li><a href="{{ path('fos_user_profile_show')}}" class="black-text">Profil</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% for messages in app.session.flashbag.get('infos') %}
+        <div class="col s12 m7">
+            <div class="card horizontal green">
+                <div class="card-stacked">
+                    <div class="card-content center-align">
+                        {{ messages }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <body class="grey lighten-4">
+        {% block main %}{% endblock %}
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    {% block javascripts %}
+    {% endblock %}
+    </body>
+    <script> $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown();</script>

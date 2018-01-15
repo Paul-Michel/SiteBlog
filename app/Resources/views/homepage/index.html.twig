@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+<body>
+    <div class="row">
+
+        <div class="col s4">
+            <!-- to center -->
+        </div>
+        <div class="col s4">
+            <a href="{{ path('list')}}"><p>Actualités</p></a>
+            <a href="{{ path('cv')}}"><p>CV</p></a>
+            {% if app.user and app.user.hasRole('ROLE_ADMIN') %}<a href="{{ path('panel')}}"><p>Panel</p></a>{% endif %}
+            <a href="{{ path('fos_user_profile_show')}}"><p>Profil</p></a>
+        </div>
+        <div class="col s4">
+            <!-- to center  -->
+        </div>
+
+    </div>
+</body>
+{% endblock %}

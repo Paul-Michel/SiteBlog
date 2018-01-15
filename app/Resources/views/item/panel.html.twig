@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block titre %}Panel Utilisateur{% endblock %}
+{% block main %}
+    <br/>
+    <div class="container ">
+        <h4>Utilisateur</h4></li>
+        <a href="{{ path('fos_user_registration_register')}}" class="waves-effect waves-light btn red z-depth-4">Ajouter</a><br/>
+        {% for user in users %}
+            <ul class="collection with-header z-depth-4">
+                <li class="collection-item "><div>{{ user.username }} | {{ user.email }} | {{ user.roles[0] }} <a href="{{ path('removeUser',{id: user.id})}}" class="secondary-content"><i class="material-icons">delete</i></a></div></li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+p{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 35%;
+    margin-top: 10%;
+    font-size: 60px;
+    color: black;
+}
+p:hover{
+    background-color: rgba(147,147,147,0.10);
+    height: 100px;
+    width:300px;
+    border-radius: 6px 6px 4px;
+    box-shadow: 10px 5px 5px black;
+}
+
+a{
+    font-size: 60px;
+}
+
+body{
+    background-image:url(http://lmpixels.com/demo/unique/unique-vcard/images/bg.png);
+}

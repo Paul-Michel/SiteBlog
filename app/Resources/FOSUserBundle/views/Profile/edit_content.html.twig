@@ -1,0 +1,21 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<link rel="stylesheet" href="{{ asset('css/Form.css') }}">
+<div class="container">
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    {{ form_row(form.username, {
+        'label': "Modifier nom d'utilisateur",
+        'attr': {'class': 'input-field'}
+    }) }}
+        {{ form_row(form.email, {
+            'label': "Modifier email",
+            'attr': {'class': 'input_field'}
+        }) }}
+        {{ form_row(form.current_password, {
+            'label': 'Mot de passe',
+            'attr': {'class': 'input-field'}
+        }) }}
+    <div>
+        <input class="waves-effect waves-light btn" type="submit" value="{{ 'Envoyer'|trans }}" />
+    </div>
+{{ form_end(form) }}
+</div>

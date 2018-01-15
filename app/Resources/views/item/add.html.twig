@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block titre %}Ajouter un article{% endblock %}
+{% block main %}
+    <link rel="stylesheet" href="{{ asset('css/Form.css') }}">
+    <div class="container">
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.title, {
+            'attr': {'class': 'input-field'}
+        }) }}
+        {{ form_row(form.description, {
+            'attr': {'class': 'materialize-textarea'}
+        }) }}
+        {{ form_row(form.code, {
+            'attr': {'class': 'input-field'}
+        }) }}
+        {{ form_row(form.collection, {
+            'attr': {'class': 'input-field'}
+        }) }}
+        {{ form_row(form.submit, {
+            'label': 'Envoyer',
+            'attr': {'class': 'btn waves-effect waves-light'}
+        }) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

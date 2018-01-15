@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Paul-Michel Garzaro | CV</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/transition-animations.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/jquery.mCustomScrollbar.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css' )}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/main-red.css') }}" type="text/css">
+
+    <link rel="stylesheet" href="{{ asset('preview/lmpixels-demo-panel.css') }}" type="text/css">
+
+    <script src="{{ asset('js/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('js/modernizr.custom.js') }}"></script>
+</head>
+
+<body>
+<!-- Loading animation -->
+<div class="preloader">
+    <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<!-- /Loading animation -->
+
+<div id="page" class="page">
+    <!-- Header -->
+    <header id="site_header" class="header mobile-menu-hide header-color-light">
+        <div class="my-photo tilt-effect">
+            <img src="{{ asset('images/photo.jpg') }}" alt="image">
+        </div>
+
+        <div class="site-title-block">
+            <h1 class="site-title">Paul-Michel Garzaro</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="site-nav">
+            <!-- Main menu -->
+            <ul id="nav" class="site-main-menu">
+                <li>
+                    <a class="pt-trigger" href="#home" data-animation="21"><i class="material-icons">home</i><br/>Home</a><!-- href value = data-id without # of .pt-page. -->
+                </li>
+                <li>
+                    <a class="pt-trigger" href="#about_me" data-animation="17"><i class="material-icons">assignment_ind</i><br/>A propos de moi</a>
+                </li>
+                <li>
+                    <a class="pt-trigger" href="#resume" data-animation="18"><i class="material-icons">assignment</i><br/>CV</a>
+                </li>
+                <li>
+                    <a class="pt-trigger" href="#contact" data-animation="20"><i class="material-icons">contact_mail</i><br/>Contact</a>
+                </li>
+            </ul>
+            <!-- /Main menu -->
+        </div>
+        <!-- Navigation -->
+    </header>
+    <!-- /Header -->
+
+    <!-- Mobile Header -->
+    <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+            <div class="mobile-site-title">Paul-Michel Garzaro</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+    <!-- /Mobile Header -->
+
+    <!-- Main Content -->
+    <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper" style="background-image: url(http://lmpixels.com/demo/unique/unique-vcard/images/bg.png);">
+            <div class="quit">
+                <a href="{{ path('index')}}" class="btn-quit"><i class="material-icons">close</i></a>
+            </div>
+            <!-- Subpages -->
+            <div class="subpages">
+
+                <!-- Home Subpage -->
+                <section class="pt-page pt-page-1 section-without-bg section-paddings-0 table" data-id="home">
+                    <div class="section-inner">
+                        <div class="home-page-block">
+                            <h2>Paul-Michel Garzaro</h2>
+                            <div class="owl-carousel text-rotation">
+                                <div class="item">
+                                    <p class="home-page-description">App develloper</p>
+                                </div>
+                                <div class="item">
+                                    <p class="home-page-description">Frontend-developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End of Home Subpage -->
+
+                <!-- About Me Subpage -->
+                <section class="pt-page pt-page-2" data-id="about_me">
+                    <div class="border-block-top-110"></div>
+                    <div class="section-inner">
+                        <div class="section-title-block">
+                            <div class="section-title-wrapper clearfix">
+                                <h2 class="section-title">A Propos de moi</h2>
+                                <h5 class="section-description">Motivé, Patient, Astucieux </h5>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                                <div class="my-photo-block tilt-effect">
+                                    <img src="{{ asset('images/photo.jpg') }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-4">
+                                <h3>Je suis étudiant a Ynov, ingésup</h3>
+                                <p>Mes études me pousse a être toujours en veille sur les nouvelles technologies, je suis passionné par l'informatique et tout ce qui y touche.</p>
+                                <p>J'ai également une certaines passion et plaisir a dévelloper, ce pour quoi j'aimerais approfondir mes compétences dans ce domaines.</p>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                                <ul class="info-list">
+                                    <li><span class="title">Age</span><span class="value">21</span></li>
+                                    <li><span class="title">Pays</span><span class="value">France</span></li>
+                                    <li><span class="title">Addresse</span><span class="value">53 route de branne, Baron</span></li>
+                                    <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@example.com">paulmichel.garzaro@ynov.com</a></span></li>
+                                    <li><span class="title">Téléphone</span><span class="value">+33 6 34 33 06 15</span></li>
+                                    <li><span class="title">Status professionnelle</span><span class="value available">Libre</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Services block -->
+                        <div class="block-title">
+                            <h3>Passion</h3>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 subpage-block">
+                                <div class="service-block">
+                                    <div class="service-info">
+                                        <h4>Web Design</h4>
+                                        <p>Réflechir a des solutions érgonomique pour les utilisateurs.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 subpage-block">
+                                <div class="service-block">
+                                    <div class="service-info">
+                                        <h4>Vidéo montage</h4>
+                                        <p>Réaliser des vidéos aussi bien pour le besoin professsionel que personnel.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 subpage-block">
+                                <div class="service-block">
+                                    <div class="service-info">
+                                        <h4>Musique</h4>
+                                        <p>Faire mais surtout écouter de la musique et la découvrir chaque jour.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3 subpage-block">
+                                <div class="service-block">
+                                    <div class="service-info">
+                                        <h4>Cinéma</h4>
+                                        <p>Voir, découvrir et revoir des films =.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Services block -->
+
+                    </div>
+                </section>
+                <!-- End of About Me Subpage -->
+
+                <!-- Resume Subpage -->
+                <section class="pt-page pt-page-3" data-id="resume">
+                    <div class="border-block-top-110"></div>
+                    <div class="section-inner">
+                        <div class="section-title-block">
+                            <div class="section-title-wrapper">
+                                <h2 class="section-title">CV</h2>
+                                <h5 class="section-description">Recherche d'alternance</h5>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 subpage-block">
+                                <div class="block-title">
+                                    <h3>Scolarité</h3>
+                                </div>
+                                <div class="timeline">
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">2017-en cours</h5>
+                                        <h4 class="event-name">Mastère Expert Informatique Et Systèmes d’information </h4>
+                                        <span class="event-description">Ynov, Ingésup</span>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">2016</h5>
+                                        <h4 class="event-name">BTS Commerce International</h4>
+                                        <span class="event-description">Lycée Saint John Perse Pau</span>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">2014-2015</h5>
+                                        <h4 class="event-name">Bac STMG (Assez Bien)</h4>
+                                        <span class="event-description">Lycée Montesquieu Libourne</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 subpage-block">
+                                <div class="block-title">
+                                    <h3>Experience Professionel</h3>
+                                </div>
+                                <div class="timeline">
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">Dec 2012 - 2017</h5>
+                                        <h4 class="event-name">Ouvrier agricoles</h4>
+                                        <span class="event-description">Vignobles Garzaro</span>
+                                        <p>Aide auprès de ma famille durant la plupart de mes vacances scolaires.</p>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">Mai 2016</h5>
+                                        <h4 class="event-name">Employés libre service</h4>
+                                        <span class="event-description">Carrefour Market Créon</span>
+                                        <p>Aide auprès de ma famille durant la plupart de mes vacances scolaires.</p>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">Oct 2011</h5>
+                                        <h4 class="event-name">Vendeur Prêt a porter</h4>
+                                        <span class="event-description">Jules Libourne.</span>
+                                        <p>Stage d'1 mois.</p>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">Dec 2011</h5>
+                                        <h4 class="event-name">Vendeur de produit éléctro-ménager</h4>
+                                        <span class="event-description">D'stock ménager</span>
+                                        <p>Stage d'1 mois.</p>
+                                    </div>
+                                    <!-- Single event -->
+                                    <div class="timeline-event te-primary">
+                                        <h5 class="event-date">Fev 2012</h5>
+                                        <h4 class="event-name">Vendeur de Meuble</h4>
+                                        <span class="event-description">Promo-Meuble bergerac</span>
+                                        <p>Stage d'1 mois.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-4 subpage-block">
+                                <div class="block-title">
+                                    <h3>Compétence Désign</h3>
+                                </div>
+                                <div class="skills-info">
+                                    <h4>Web Design</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-1"></div>
+                                    </div>
+
+                                    <h4>Graphic Design</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-2"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="block-title">
+                                    <h3>Compétence dévellopement</h3>
+                                </div>
+                                <div class="skills-info">
+                                    <h4>HTML5</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-4"></div>
+                                    </div>
+
+                                    <h4>CSS3</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-5"></div>
+                                    </div>
+
+                                    <h4>jQuery</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-6"></div>
+                                    </div>
+
+                                    <h4>Wordpress</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-7"></div>
+                                    </div>
+
+                                    <h4>PHP</h4>
+                                    <div class="skill-container">
+                                        <div class="skill-percentage skill-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Resume Subpage -->
+
+
+
+                <!-- Contact Subpage -->
+                <section class="pt-page pt-page-5" data-id="contact">
+                    <div class="border-block-top-110"></div>
+                    <div class="section-inner">
+                        <div class="section-title-block">
+                            <div class="section-title-wrapper">
+                                <h2 class="section-title">Contact</h2>
+                                <h5 class="section-description">Rester en contact</h5>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 subpage-block">
+                                <div class="block-title">
+                                    <h3>Rester en contact</h3>
+                                </div>
+                                <p></p>
+                                <div class="contact-info-block">
+                                    <div class="ci-icon">
+                                        <i class="material-icons">location_on</i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h5>Bordeaux, France</h5>
+                                    </div>
+                                </div>
+                                <div class="contact-info-block">
+                                    <div class="ci-icon">
+                                        <i class="material-icons">mail</i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h5>paulmichel.garzaro@ynov.com</h5>
+                                    </div>
+                                </div>
+                                <div class="contact-info-block">
+                                    <div class="ci-icon">
+                                        <i class="material-icons">phone</i>
+                                    </div>
+                                    <div class="ci-text">
+                                        <h5>+33 6 34 33 06 15</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6 subpage-block">
+                                <div class="block-title">
+                                    <h3>Formulaire de contact</h3>
+                                </div>
+                                <form id="contact-form" method="post" action="contact_form/contact_form.php">
+
+                                    <div class="messages"></div>
+
+                                    <div class="controls">
+                                        <div class="form-group">
+                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="requis" data-error="Votre Nom est requis.">
+                                            <div class="form-control-border"></div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="requis" data-error="Adresse non-valide">
+                                            <div class="form-control-border"></div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="4" required="requis" data-error="Laisser un message"></textarea>
+                                            <div class="form-control-border"></div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+
+                                        <input type="submit" class="button btn-send" value="Envoyer Message">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Contact Subpage -->
+
+            </div>
+        </div>
+        <!-- /Page changer wrapper -->
+    </div>
+    <!-- /Main Content -->
+</div>
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/pages-switcher.js') }}"></script>
+<script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('js/validator.js') }}"></script>
+<script src="{{ asset('js/jquery.shuffle.min.js') }}"></script>
+<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+<script src="{{ asset('js/tilt.jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery.hoverdir.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+
+</body>
+</html>

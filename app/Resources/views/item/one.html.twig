@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+{% block titre %}Article{% endblock %}
+{% block main %}
+    <div class="row">
+<div class="col s12 "><p></p></div>
+<div class="col s12 m4 l2"><p></p></div>
+<div class="col s12 m4 l8 "><p>
+    <br/>
+    <div class="card white darken-1 z-depth-5">
+        <div class="card-content black-text">
+            <span class="card-title"><br/>{{ item.title }}<br/></span>
+    <p><br/>{{ item.description|nl2br }}<br/></p>
+    </div>
+    <div class="card-action center-align">
+        <a href="https://www.facebook.com" class="red-text">Partager</a>
+        {% if app.user and app.user.hasRole('ROLE_ADMIN') %}<a href="{{ path('removeArticle',{id: item.id})}}" class="red-text">Supprimer</a>{% endif %}
+    </div>
+    </div>
+</p></div>
+</div>
+<div class="container">
+    <div class="card">
+        {% if app.user %}
+            <div class="card-content">
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+
+
+                {{ form_row(form.content, {
+                    'attr': {'class': 'materialize-textarea'}
+                }) }}
+
+                {{ form_row(form.submit, {
+                    'attr': {'class': 'btn waves-effect waves-light'}
+                }) }}
+                {{ form_end(form) }}
+            </div>
+            </div>
+        {% else %}
+            <div class="card-content">
+                <a class="waves-effect waves-teal btn-small green-text" href="{{ path('fos_user_security_login') }}">login</a> or
+                <a class="waves-effect waves-teal btn-small" href="{{ path('fos_user_registration_register') }}">register</a> to comment
+            </div>
+        {% endif %}
+    </div>
+    <div class="container">
+        <ul class="collection">
+            {% for comment in comments %}
+                {% set haveUser = false %}
+                <li class="collection-item avatar">
+                    {% for user in users %}
+                        {% if user.id == comment.user %}
+                            {%  if  user.roles[0]=='ROLE_ADMIN' %}
+                                <i class="large material-icons circle red">supervisor_account</i>
+                            {% else %}
+                                <i class="large material-icons circle blue">person</i>
+                            {% endif %}
+                            <span class="title">
+                                            <strong>{{ user.username }}</strong>
+                                        </span>
+                            {% set haveUser = true %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if haveUser == false %}
+                        <i class="large material-icons circle grey">person</i>
+                        <strong>Deleted account</strong>
+                    {% endif %}
+                    <p class="grey-text text-lighten-0">
+                        {{ comment.content|nl2br }}
+                    </p>
+                    <span class="secondary-content">
+                                <span class="grey-text">
+                                    {{ comment.date|date("d/m/Y") }}
+                                </span>
+                        {% if app.user and (app.user.id == comment.user) or app.user.hasRole('ROLE_ADMIN') %}
+                            <a class="btn-flat" href="
+                                           {{ path('removeComment',
+                                {'id': comment.id,
+                                    'backRoute' : app.request.attributes.get('_route'),
+                                    'backRouteParameter' : app.request.attributes.get('_route_params')
+                                }) }}
+                                       "><i class="material-icons red-text">delete</i></a>
+                        {% endif %}
+                            </span>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+
+{% endblock %}
