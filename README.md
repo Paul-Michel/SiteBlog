@@ -23,12 +23,12 @@ Afin d'initialiser le projet il faut utiliser la commande : composer create-proj
   * Username : root
   * MDP:(null)
 
+## Les identifiants de connexion pour l'administrateur sont 
+
+  * Identifiant : Root
+  * Mot de Passe : root
+ 
 L'administrabilité via le compte admin est répartie un peut partout dans le site. il suffit de se connecter avec le compte administrateur pour y avoir accès.
-
-## Les identifiants de connexion pour l'administrateur est 
-
-  Identifiant : Root
-  Mot de Passe : root
 
 ## Envoi Mail
 
